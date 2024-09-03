@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a36e6d5b57.js" crossorigin="anonymous"></script>
+    <script src="home.js"></script>
     <link rel="stylesheet" type="text/css" href="home_page_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,21 +13,23 @@
 </head>
 <body>
     <div id="home">
-        <div class="container">
+        <div class="nav">
             <nav>
                 <h1>Welcome to my personal portfolio</h1>
-               <ul>
+               <ul id="sidemenu">
                 <li><a href="/components/home/home_page.html">Home</a></li>
                 <li><a href="/components/projects/projects_page.html">Projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/components/skills/skills.html">Skills</a></li>
+                <li><a href="/components/contact/contact.html">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
                </ul>
+               <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
         <div class="home">
             <p>Kia Ora, i'm</p>
             <h2><span>Liam</span> Scifleet Naughton</h2>
-            <img src="/assets/images/profile_photo.jpg" alt="profile photo" id="profile_photo">
+            <img src="/assets/images/1000018020.jpg" alt="profile photo" id="profile_photo">
             <p id="about_me">Based in Nelson, New Zealand, I am currently enrolled in 
             the Bachelor of Information Technologies (BIT) program at the Nelson 
             Marlborough Institute of Technology (NMIT). As a first-year student with 
@@ -36,41 +40,17 @@
             strong passion for videography and am an adept <a href="#">Video Editor.</a></p>
         </div>
     </div>
-    <div id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project_list">
-                <div class="projects" id="project1">
-                    <img src="/assets/images/Isometric_Room_Final_Render.jpg">
-                    <div class="project_desc">
-                        <h3>Isometric Room</h3>
-                        <p>A Studio Ghibli inspired Isometric Room, 3D modelled using Maya and textured using Substance Painter.</p>
-                    </div>
-                </div>
-                 <div class="projects" id="project2">
-                    <img src="/assets/images/Pounamu_Render.jpg">
-                </div>
-                <div class="projects" id="project3">
-                    <img src="/assets/images/Potion_Final_Render.jpg">
-                </div>
-            </div>
-            <div class="popup_image">
-                <span>&times;</span>
-                <img src="/assets/images/Isometric_Room_Final_Render.jpg">
-            </div>
-            <script src="script.js"></script>
-            <!-- <script>
-                document.querySelectorAll('.project_list img').forEach(image =>{
-                    image.onclick = () =>{
-                        document.querySelector('.popup_image').style.display = 'block';
-                        document.querySelector('.popup_image img').src = image.getAttribute('src')
-                    }
-                });
-                document.querySelector('.popup_image span').onclick =() =>{
-                    document.querySelector('.popup_image').style.display = 'none';
-                }
-            </script>-->
-        </div>
-    </div>
 </body>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0"
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px"
+    }
+</script>
 </html>

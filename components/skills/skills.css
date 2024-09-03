@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'raleway', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background: #151515;
+    color: #0e0047;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/images/deux-cosmetiques-64BMnhOv_go-unsplash.jpg);
+    background-size: 100%;
+    background-position: 0 70%;
+    background-attachment: fixed;
+}
+
+.nav {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #0e0047;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: 0.4s linear;
+}
+
+nav ul li a:hover {
+    color: #ffff00;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffff00;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.container {
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #ffffff;
+    text-align: center;
+}
+
+.skill {
+    padding: 20% 9%;
+    margin: 14% 0;
+    border-radius: 5%;
+    width: 23vw;
+    height: 0;
+}
+
+#skill_1 {
+    background-image: url(/assets/images/matthew-sichkaruk-u0y_5fhM3DU-unsplash.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: inherit;
+    filter: drop-shadow(8px 8px 16px #000);
+}
+
+.skill h2, .skill p {
+    padding: 0;
+    margin: 0 -50px;
+    filter: drop-shadow(8px 8px 16px #000);
+}
+
+.skill h2 {
+    margin-top: -120%;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffff00;
+}
+
+.skill p {
+    margin-top: 40%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#skill_2 {
+    background-image: url(/assets/images/Space_Scene_Project_Screenshot.png);
+    background-size: 300%;
+    background-position: 40% 80%;
+    background-attachment: inherit;
+    filter: drop-shadow(8px 8px 16px #000);
+}
+
+#skill_3 {
+    background-image: url(/assets/images/young-man-engineer-making-program-analyses.jpg);
+    background-size: cover;
+    background-position: 75%;
+    background-attachment: inherit;
+    filter: drop-shadow(8px 8px 16px #000);
+}

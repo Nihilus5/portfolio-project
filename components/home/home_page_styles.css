@@ -13,19 +13,17 @@ img {
 }
 
 body {
-    background: #000000;
-    color: #fff;
-}
-
-#home {
+    background: #151515;
+    color: #0e0047;
     width: 100%;
     height: 100vh;
-    background-image: url(/assets/images/fer-sehen-6nS6_59REnA-unsplash.jpg);
+    background-image: url(/assets/images/deux-cosmetiques-64BMnhOv_go-unsplash.jpg);
     background-size: 100%;
-    background-position: center;
+    background-position: 0 70%;
+    background-attachment: fixed;
 }
 
-.container {
+.nav {
     padding: 10px 10%;
 }
 
@@ -44,16 +42,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #0e0047;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    transition: 0.4s linear;
+}
+
+nav ul li a:hover {
+    color: #ffff00;
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff4343;
+    background: #ffff00;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -65,9 +69,10 @@ nav ul li a:hover::after {
 }
 
 .home {
-    padding: 10px 10%;
+    padding: 4% 10%;
     margin-top: 10%;
-    font-size: 25px;
+    font-size: 1.7rem;
+    color: #fff;
 }
 
 .home h2 {
@@ -78,13 +83,13 @@ nav ul li a:hover::after {
 #profile_photo {
     width: 404px;
     float: right;
-    margin-top: -82px;
+    margin-top: -100px;
     filter: drop-shadow(8px 8px 16px #000);
     border-radius: 10px;
 }
 
 .home h2 span {
-    color: #ff4343;
+    color: #ffff00;
 }
 
 #about_me {
@@ -92,7 +97,7 @@ nav ul li a:hover::after {
 }
 
 .home a {
-    color: #ff4343;
+    color: #ffff00;
     text-decoration: none;
 }
 
@@ -101,100 +106,70 @@ nav ul li a:hover::after {
     transition: 0.2s;
 }
 
-/* Projects Section */
-
-#projects {
-    padding: 50px 0;
-    background-color: #ff4343;
-}
-
-.project_list {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.projects {
-    border-radius: 10px;
-    position: relative;
-    filter: drop-shadow(8px 8px 16px #000);
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.projects:hover {
-    transform: scale(1.04);
-}
-
-.projects img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: 0.2s linear;
-}
-
-/* .projects img:hover {
-    transform: scale(1.1)
-} */
-
-.container .popup_image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .9);
-    height: 100%;
-    width: 100%;
-    z-index: 100;
+nav .fa-solid {
     display: none;
 }
 
-/* The X for exiting popup window */
-.container .popup_image span {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 60px;
-    font-weight: 300;
-    color: #fff;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.container .popup_image img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ff4343;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-@media (max-width:768px) {
-    .popup_image img {
-        width: 95%;
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(/assets/images/phone_background.jpg);
+        background-size: 150%;
+        background-position: 0 90%;
+        background-attachment: fixed;
     }
-}
 
-.project_desc {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    padding: 100px 40px;
-}
+    .home {
+        margin-top: 50%;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 1rem;
+    }
 
-.project_desc:hover {
-    background: transparent;
-    color: transparent;
-}
+    .home h2 {
+        font-size: 1.5rem;
+    }
 
+    #about_me {
+        margin: 0 0;
+    }
 
-.project_desc h3:hover {
-    display: none;
+    #profile_photo {
+        width: 170px;
+        margin: 20px 0;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        background: #ffff00;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
