@@ -29,7 +29,7 @@ body {
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -37,7 +37,7 @@ nav {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 1rem 0.5rem;
     position: relative;
 }
 
@@ -45,27 +45,35 @@ nav ul li a {
     color: #0e0047;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 900;
-    transition: 0.4s linear;
+    font-weight: 800;
+    transition: 0.3s linear;
 }
 
 nav ul li a:hover {
     color: #ffff00;
 }
 
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ffff00;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
 nav ul li a:hover::after {
     width: 100%;
+}
+
+#nav_icon {
+    width: 5rem;
+}
+
+#nav_home {
+    width: 5rem;
+    border-right: 2px solid #0e0047;
+}
+
+#nav_projects {
+    width: 6.5rem;
+    border-right: 2px solid #0e0047;
+}
+
+#nav_skills {
+    width: 5rem;
+    border-right: 2px solid #0e0047;
 }
 
 .container {
@@ -90,30 +98,34 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-h2 {
-    font-size: 50px;
+h1 {
+    font-size: 3.5rem;
     color: #ffff00;
 }
 
 #heading_container input {
-    width: 30%;
+    width: 25%;
     border: 0;
     outline: none;
     background: #151515;
     padding: 15px;
     margin: 30px 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.5rem;
     border-radius: 6px;
 }
 
 .project_list {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
 }
 
 .projects {
+    flex: 0 1 340px;
+    max-width: 100%;
+    box-sizing: border-box;
     border-radius: 10px;
     position: relative;
     filter: drop-shadow(8px 8px 16px #000);
@@ -180,7 +192,7 @@ h2 {
     left: 0;
     bottom: 0;
     text-align: center;
-    padding: 100px 40px;
+    padding: 40px;
     overflow: hidden;
     transform: translateY(100%);
     transition: all 0.6s ease-in-out;
@@ -188,4 +200,82 @@ h2 {
 
 .projects:hover > .project_desc {
     transform: translateY(0%);
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(/assets/images/phone_background.jpg);
+        background-size: 150%;
+        background-position: 0 15%;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #nav_icon {
+        width: 2.5rem;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        background: #ffff00;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 12rem;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #nav_home {
+        width: 0;
+        border: none;
+    }
+    
+    #nav_projects {
+        width: 0;
+        border: none;
+    }
+    
+    #nav_skills {
+        width: 0;
+        border: none;
+    }
+
+    #heading_container {
+        margin-top: 8%;
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    #heading_container input {
+        width: 40%;
+        padding: 6px;
+        color: #fff;
+        font-size: 10px;
+    }
 }

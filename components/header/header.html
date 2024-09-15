@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a36e6d5b57.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="home_page_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +13,16 @@
 <body>
     <div class="nav">
         <nav>
-            <h1>Welcome to my personal portfolio</h1>
-           <ul>
-            <li><a href="/components/home/home_page.html">Home</a></li>
-            <li><a href="/components/projects/projects_page.html">Projects</a></li>
-            <li><a href="/components/skills/skills.html">Skills</a></li>
-            <li><a href="/components/contact/contact.html">Contact</a></li>
+            <a href="/components/home/home_page.html"><img src="/assets/images/LionLoadIconBlue.png" alt="" id="nav_icon"></a>
+            <ul id="sidemenu">
+            <li id="nav_home"><a href="/components/home/home_page.html">Home</a></li>
+            <li id="nav_projects"><a href="/components/projects/projects_page.html">Projects</a></li>
+            <li id="nav_skills"><a href="/components/skills/skill.html">Skills</a></li>
+            <li id="nav_contact"><a href="/components/contact/contact.html">Contact</a></li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
            </ul>
+           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
-    </div>   
+    </div>  
 </body>
 </html>

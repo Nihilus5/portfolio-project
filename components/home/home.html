@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a36e6d5b57.js" crossorigin="anonymous"></script>
     <script src="home.js"></script>
-    <link rel="stylesheet" type="text/css" href="home_page_styles.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>Home Page</title>
 </head>
 <body>
     <div id="home">
         <div class="nav">
             <nav>
-                <h1>Welcome to my personal portfolio</h1>
-               <ul id="sidemenu">
-                <li><a href="/components/home/home_page.html">Home</a></li>
-                <li><a href="/components/projects/projects_page.html">Projects</a></li>
-                <li><a href="/components/skills/skills.html">Skills</a></li>
-                <li><a href="/components/contact/contact.html">Contact</a></li>
+                <a href="/components/home/home.html"><img src="/assets/images/LionLoadIconBlue.png" alt="" id="nav_icon"></a>
+                <ul id="sidemenu">
+                <li id="nav_home"><a href="/components/home/home.html">Home</a></li>
+                <li id="nav_projects"><a href="/components/projects/projects.html">Projects</a></li>
+                <li id="nav_skills"><a href="/components/skills/skills.html">Skills</a></li>
+                <li id="nav_contact"><a href="/components/contact/contact.html">Contact</a></li>
                 <i class="fa-solid fa-x" onclick="closemenu()"></i>
                </ul>
                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -28,7 +28,7 @@
         </div>
         <div class="home">
             <p>Kia Ora, i'm</p>
-            <h2><span>Liam</span> Scifleet Naughton</h2>
+            <h1><span>Liam</span> Scifleet Naughton</h1>
             <img src="/assets/images/1000018020.jpg" alt="profile photo" id="profile_photo">
             <p id="about_me">Based in Nelson, New Zealand, I am currently enrolled in 
             the Bachelor of Information Technologies (BIT) program at the Nelson 

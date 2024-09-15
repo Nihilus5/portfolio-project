@@ -23,13 +23,17 @@ body {
     background-attachment: fixed;
 }
 
+.container {
+    padding: 10px 10%;
+}
+
 .nav {
     padding: 10px 10%;
 }
 
 nav {
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -37,7 +41,7 @@ nav {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 1rem 0.5rem;
     position: relative;
 }
 
@@ -45,86 +49,148 @@ nav ul li a {
     color: #0e0047;
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 900;
-    transition: 0.4s linear;
+    font-weight: 800;
+    transition: 0.3s linear;
 }
 
 nav ul li a:hover {
     color: #ffff00;
 }
 
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ffff00;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
 nav ul li a:hover::after {
     width: 100%;
 }
 
+#nav_icon {
+    width: 5rem;
+}
+
+#nav_home {
+    width: 5rem;
+    border-right: 2px solid #0e0047;
+}
+
+#nav_projects {
+    width: 6.5rem;
+    border-right: 2px solid #0e0047;
+}
+
+#nav_skills {
+    width: 5rem;
+    border-right: 2px solid #0e0047;
+}
+
 .container {
-    padding: 10px 10%;
+    padding: 10%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    color: #ffffff;
-    text-align: center;
+    justify-content: center;
+    gap: 6rem;
 }
 
 .skill {
-    padding: 20% 9%;
-    margin: 14% 0;
-    border-radius: 5%;
-    width: 23vw;
-    height: 0;
+    flex: 0 1 26rem;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    position: relative;
+    filter: drop-shadow(8px 8px 16px #000);
+    overflow: hidden;
 }
 
-#skill_1 {
-    background-image: url(/assets/images/matthew-sichkaruk-u0y_5fhM3DU-unsplash.jpg);
-    background-size: 100%;
-    background-position: center;
-    background-attachment: inherit;
-    filter: drop-shadow(8px 8px 16px #000);
+.skill img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    scale: 1.2;
 }
 
-.skill h2, .skill p {
-    padding: 0;
-    margin: 0 -50px;
-    filter: drop-shadow(8px 8px 16px #000);
+.skill_desc {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding: 8rem 2rem;
+    color: #fff;
+}
+
+#skill_2 {
+    object-position: 40%;
+}
+
+#skill_3 {
+    object-position: 70%;
 }
 
 .skill h2 {
-    margin-top: -120%;
     font-size: 2.2rem;
     font-weight: 900;
     color: #ffff00;
 }
 
 .skill p {
-    margin-top: 40%;
+    margin-top: 10%;
     font-size: 1.2rem;
     font-weight: 600;
-}
-
-#skill_2 {
-    background-image: url(/assets/images/Space_Scene_Project_Screenshot.png);
-    background-size: 300%;
-    background-position: 40% 80%;
-    background-attachment: inherit;
     filter: drop-shadow(8px 8px 16px #000);
 }
 
-#skill_3 {
-    background-image: url(/assets/images/young-man-engineer-making-program-analyses.jpg);
-    background-size: cover;
-    background-position: 75%;
-    background-attachment: inherit;
-    filter: drop-shadow(8px 8px 16px #000);
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(/assets/images/phone_background.jpg);
+        background-size: 150%;
+        background-position: 0 73%;
+        background-attachment: fixed;
+    }
+
+    #nav_icon {
+        width: 2.5rem;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        background: #ffff00;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 12rem;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #nav_home {
+        width: 0;
+        border: none;
+    }
+    
+    #nav_projects {
+        width: 0;
+        border: none;
+    }
+    
+    #nav_skills {
+        width: 0;
+        border: none;
+    }
 }

@@ -3,37 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a36e6d5b57.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="skills.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>Skills</title>
 </head>
 <body>
     <div id="skills">
-    <div class="nav">
-        <nav>
-            <h1>Welcome to my personal portfolio</h1>
-           <ul>
-            <li><a href="/components/home/home_page.html">Home</a></li>
-            <li><a href="/components/projects/projects_page.html">Projects</a></li>
-            <li><a href="/components/skills/skills.html">Skills</a></li>
-            <li><a href="/components/contact/contact.html">Contact</a></li>
-           </ul>
-        </nav>
-    </div>
+        <div class="nav">
+            <nav>
+                <a href="/components/home/home.html"><img src="/assets/images/LionLoadIconBlue.png" alt="" id="nav_icon"></a>
+                <ul id="sidemenu">
+                <li id="nav_home"><a href="/components/home/home.html">Home</a></li>
+                <li id="nav_projects"><a href="/components/projects/projects.html">Projects</a></li>
+                <li id="nav_skills"><a href="/components/skills/skills.html">Skills</a></li>
+                <li id="nav_contact"><a href="/components/contact/contact.html">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+               </ul>
+               <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
     <div class="container">
         <div class="skill" id="skill_1">
+            <img src="/assets/images/matthew-sichkaruk-u0y_5fhM3DU-unsplash.jpg" alt="" id="skill_1">
+            <div class="skill_desc">
             <h2>Video Editing</h2>
             <p>Excellent video editor experienced in After Effects & Premier Pro.</p>
         </div>
+        </div>
         <div class="skill" id="skill_2">
-            <h2>3D Modelling</h2>\
+            <img src="/assets/images/Space_Scene_Project_Screenshot.png" alt="" id="skill_2">
+            <div class="skill_desc">
+            <h2>3D Modelling</h2>
             <p>Experienced in 3D modelling & texturing using Maya & Substance Painter.
                 Also experienced in After Effects, Illustrator, Photoshop and Unreal Engine 5.
             </p>
         </div>
+        </div>
         <div class="skill" id="skill_3">
+            <img src="/assets/images/young-man-engineer-making-program-analyses.jpg" alt="" id="skill_3">
+        <div class="skill_desc">
             <h2>Networking</h2>
             <p>Experience in operating system installation, including Windows Server 2022.
                 My expertise encompasses installing and configuring Active Directory Domain
@@ -41,7 +52,19 @@
                 and implementing group policies.
             </p>
         </div>
+        </div>
     </div>
 </div>   
 </body>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0"
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px"
+    }
+</script>
 </html>
